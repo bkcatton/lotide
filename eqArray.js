@@ -4,22 +4,19 @@ const assertEqual = function(actual, expected) {
   if (actual === expected) {
     returnVal = `😃Assertion Passed: [${actual}] === [${expected}]`;
     console.log(returnVal);
-    return true;
   } else if (actual !== expected) {
     returnVal = `😔Assertion Failed: [${actual}] !== [${expected}]`;
     console.log(returnVal);
-    return false;
   }
 };
 
-const eqArrays = function(arrayOne, arrayTwo) {
+const eqArrays = function (arrayOne, arrayTwo) { //tests if all instances are the same at same index
   if (arrayTwo.length !== arrayOne.length) {
     return false;
-  } 
-
+  }
   let testIfEqual = true;
   for (let i = 0; i < arrayOne.length; i++) {
-    if ((assertEqual(arrayTwo[i], arrayOne[i])) === false) {
+    if (arrayTwo[i] !== arrayOne[i]) {
       return false;
     }
   }
