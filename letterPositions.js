@@ -27,16 +27,17 @@ const letterPositions = function (sentence) {
   //console.log(sentence);
   for (const i in sentence) {
     //console.log("this is what is logged from the sentence: ", i);
-    if (sentence[i] !== " ") {
+    //if (sentence[i] !== " ") {
       if (result[sentence[i]]) {
         result[sentence[i]].push(+i);
       } else {
         result[sentence[i]] = [+i];
       }
-    }
+    //}
   };
   return result;
 };
 
-assertArraysEqual(letterPositions("sassy").s,[0, 2, 3]);
+assertArraysEqual(letterPositions("sas sy").s,[0, 2, 4]);
 assertArraysEqual(letterPositions("hello").e, [1]);
+assertArraysEqual(letterPositions("hel lo")[" "], [3]);
