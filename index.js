@@ -5,5 +5,8 @@ const middle = require('./middle');
 module.exports = {
   head:   head,
   tail:   tail,
-  middle: middle
+  middle: middle,
+  eqArrays: eqArrays,
+  assertEqual: assertEqual,
+  assertArraysEqual: assertArraysEqual
 };
